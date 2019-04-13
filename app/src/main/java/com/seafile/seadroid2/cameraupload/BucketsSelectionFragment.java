@@ -3,7 +3,7 @@ package com.seafile.seadroid2.cameraupload;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +12,6 @@ import android.content.Context;
 
 import com.seafile.seadroid2.R;
 import com.seafile.seadroid2.SettingsManager;
-import com.seafile.seadroid2.cameraupload.GalleryBucketUtils;
 
 import java.util.ArrayList;
 import java.util.List;

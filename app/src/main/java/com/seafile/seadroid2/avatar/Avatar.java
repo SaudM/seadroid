@@ -1,11 +1,12 @@
 package com.seafile.seadroid2.avatar;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.util.Log;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-import android.util.Log;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Avatar {
     private static final String DEBUG_TAG = "Avatar";
@@ -68,7 +69,7 @@ public class Avatar {
     
     @Override
     public String toString() {
-        return Objects.toStringHelper(this)
+        return MoreObjects.toStringHelper(this)
                 .add("signature", signature)
                 .add("url", url)
                 .add("mtime", mtime)

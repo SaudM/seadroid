@@ -5,7 +5,7 @@
               android:orientation="vertical">
     <include layout="@layout/toolbar_actionbar"/><!-- placeholder, empty except on L -->
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/server_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
             android:background="@drawable/edit_text_holo_light"
             android:inputType="textUri"/>
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <LinearLayout
