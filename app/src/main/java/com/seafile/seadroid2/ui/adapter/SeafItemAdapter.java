@@ -231,11 +231,11 @@ public class SeafItemAdapter extends BaseAdapter {
         viewHolder.title.setText(repo.getTitle());
         viewHolder.subtitle.setText(repo.getSubtitle());
         viewHolder.icon.setImageResource(repo.getIcon());
-        if (repo.hasWritePermission()) {
-            viewHolder.action.setVisibility(View.VISIBLE);
-        } else {
-            viewHolder.action.setVisibility(View.INVISIBLE);
-        }
+//        if (repo.hasWritePermission()) {
+//            viewHolder.action.setVisibility(View.VISIBLE);
+//        } else {
+//            viewHolder.action.setVisibility(View.INVISIBLE);
+//        }
         return view;
     }
 
@@ -314,16 +314,16 @@ public class SeafItemAdapter extends BaseAdapter {
 
             viewHolder.subtitle.setText(dirent.getSubtitle());
 
-            if (repoIsEncrypted) {
-                viewHolder.action.setVisibility(View.GONE);
-            } else
-                viewHolder.action.setVisibility(View.VISIBLE);
+//            if (repoIsEncrypted) {
+//                viewHolder.action.setVisibility(View.GONE);
+//            } else
+//                viewHolder.action.setVisibility(View.VISIBLE);
 
             viewHolder.icon.setImageResource(dirent.getIcon());
         } else {
             viewHolder.downloadStatusIcon.setVisibility(View.GONE);
             viewHolder.progressBar.setVisibility(View.GONE);
-            viewHolder.action.setVisibility(View.VISIBLE);
+//            viewHolder.action.setVisibility(View.VISIBLE);
             setFileView(dirent, viewHolder, position);
         }
 
@@ -468,7 +468,7 @@ public class SeafItemAdapter extends BaseAdapter {
         viewHolder.title.setText(item.getTitle());
         viewHolder.subtitle.setText(item.getSubtitle());
         viewHolder.icon.setImageResource(item.getIcon());
-        viewHolder.action.setVisibility(View.INVISIBLE);
+//        viewHolder.action.setVisibility(View.INVISIBLE);
         return view;
     }
 
