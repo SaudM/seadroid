@@ -22,13 +22,13 @@
     <color name="fancy_deep_black">#989898</color> <!-- color for dividers inside of slide expandable list item -->
     <color name="fancy_gray">#969696</color>
     <color name="fancy_dark_gray">#e1e2e3</color>
-    <color name="fancy_orange">#ea8201</color> <!-- theme color -->
+    <color name="fancy_orange">#4768fd</color> <!-- theme color -->
     <color name="color_primary">#f4f4f4</color>
     <color name="color_primary_dark">#969593</color>
     <!--editor-->
-    <color name="blue_200">#FF90CAF9</color>
-    <color name="blue_500">#FF2196F3</color>
-    <color name="blue_700">#FF1976D2</color>
+    <color name="blue_200">#27e5fd</color>
+    <color name="blue_500">#4768fd</color>
+    <color name="blue_700">#3c54fe</color>
     <color name="blue_bg">#FF303030</color>
     <color name="pale_yellow">#DFA788</color>
 
