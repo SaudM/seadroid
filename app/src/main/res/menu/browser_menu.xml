@@ -22,10 +22,10 @@
         app:showAsAction="always"
         android:title="More">
       <menu>
-        <item android:id="@+id/create_repo"
-        android:visible="true"
-        android:title="@string/add_repo"
-        app:showAsAction="ifRoom"/>
+        <!--<item android:id="@+id/create_repo"-->
+        <!--android:visible="true"-->
+        <!--android:title="@string/add_repo"-->
+        <!--app:showAsAction="ifRoom"/>-->
 
         <item android:id="@+id/add"
         android:visible="true"
@@ -37,15 +37,15 @@
               android:title="@string/edit"
               app:showAsAction="never"/>
 
-	    <item android:id="@+id/transfer_tasks"
-              android:visible="true"
-              android:title="@string/transfer_tasks"
-              app:showAsAction="never"/>
+	    <!--<item android:id="@+id/transfer_tasks"-->
+              <!--android:visible="true"-->
+              <!--android:title="@string/transfer_tasks"-->
+              <!--app:showAsAction="never"/>-->
 
-	    <item android:id="@+id/accounts"
-              android:visible="true"
-              android:title="@string/accounts"
-              app:showAsAction="never"/>
+	    <!--<item android:id="@+id/accounts"-->
+              <!--android:visible="true"-->
+              <!--android:title="@string/accounts"-->
+              <!--app:showAsAction="never"/>-->
 
 
         <item android:id="@+id/settings"

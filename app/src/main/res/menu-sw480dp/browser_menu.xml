@@ -43,10 +43,10 @@
               android:title="@string/transfer_tasks"
               app:showAsAction="never"/>
 
-	    <item android:id="@+id/accounts"
-              android:visible="true"
-              android:title="@string/accounts"
-              app:showAsAction="never"/>
+	    <!--<item android:id="@+id/accounts"-->
+              <!--android:visible="true"-->
+              <!--android:title="@string/accounts"-->
+              <!--app:showAsAction="never"/>-->
 
 
         <item android:id="@+id/settings"

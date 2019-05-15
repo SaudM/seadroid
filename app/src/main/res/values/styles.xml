@@ -14,10 +14,10 @@
      limitations under the License.
 -->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/fancy_light_black</item>
@@ -38,7 +38,7 @@
         <item name="android:textSelectHandleLeft">@drawable/fancy_orange_text_select_handle_left</item>
         <item name="android:textSelectHandleRight">@drawable/fancy_orange_text_select_handle_right</item>
         <item name="android:textSelectHandle">@drawable/fancy_orange_text_select_handle_middle</item>
-        <item name="android:colorButtonNormal">@color/fancy_orange</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">@color/fancy_orange</item>
         <item name="colorButtonNormal">@color/fancy_orange</item>
         <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
     </style>
@@ -58,7 +58,7 @@
         <item name="titleTextColor">@color/white</item>
         <item name="actionMenuTextColor">@android:color/white</item>
         <!--<item name="android:textColorPrimary">@android:color/white</item>-->
-        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">@android:color/white</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_white_back</item>
         <item name="homeAsUpIndicator">@drawable/ic_white_back</item>
         <item name="android:alertDialogTheme">@style/MainActivityTheme.AlertDialogTheme</item>
@@ -71,9 +71,9 @@
     </style>
 
     <style name="Theme.Fullscreen" parent="AppTheme">
-        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
     <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -85,7 +85,7 @@
     <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorColor">@color/fancy_orange</item>
         <item name="android:background">@color/color_primary</item>
-        <item name="android:contentInsetStart">?actionBarInsetStart</item>
+        <item name="android:contentInsetStart" tools:targetApi="lollipop">?actionBarInsetStart</item>
     </style>
 
     <style name="TabTextAppearancce" parent="TextAppearance.Design.Tab">
@@ -126,6 +126,7 @@
         <!-- <item name="android:colorPressedHighlight">@color/black</item> -->
         <!-- <item name="android:colorLongPressedHighlight">@color/black</item> -->
     </style>
+
     <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/checkbox_btn_holo_light</item>
     </style>
@@ -145,6 +146,7 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="NotificationContent"
            parent="@android:style/TextAppearance">
         <item name="android:textColor">#ff000000</item>
