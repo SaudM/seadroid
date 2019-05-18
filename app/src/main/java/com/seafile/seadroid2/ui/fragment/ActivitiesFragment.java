@@ -4,9 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +40,10 @@ import com.seafile.seadroid2.util.Utils;
 import org.json.JSONException;
 
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class ActivitiesFragment extends Fragment {
     private static final String DEBUG_TAG = "ActivitiesFragment";
@@ -408,7 +409,7 @@ public class ActivitiesFragment extends Fragment {
 
             offset = result.getOffset();
             if (!result.isMore()) {
-                mActivity.showShortToast(mActivity, getString(R.string.no_more_activities));
+//                mActivity.showShortToast(mActivity, getString(R.string.no_more_activities));
                 return;
             }
 
