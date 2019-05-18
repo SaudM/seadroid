@@ -427,7 +427,7 @@ public class ActivitiesFragment extends Fragment {
 
             offset = result.getOffset();
             if (!result.isMore()) {
-                mActivity.showShortToast(mActivity, getString(R.string.no_more_activities));
+//                mActivity.showShortToast(mActivity, getString(R.string.no_more_activities));
                 return;
             }
 

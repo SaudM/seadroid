@@ -1,7 +1,6 @@
 package com.seafile.seadroid2.ui.fragment;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -11,10 +10,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceScreen;
-import androidx.appcompat.app.AlertDialog;
 import android.text.Html;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -28,14 +24,9 @@ import com.seafile.seadroid2.account.AccountInfo;
 import com.seafile.seadroid2.account.AccountManager;
 import com.seafile.seadroid2.cameraupload.CameraUploadConfigActivity;
 import com.seafile.seadroid2.cameraupload.CameraUploadManager;
-import com.seafile.seadroid2.cameraupload.GalleryBucketUtils;
 import com.seafile.seadroid2.data.DataManager;
 import com.seafile.seadroid2.data.DatabaseHelper;
-import com.seafile.seadroid2.data.ServerInfo;
 import com.seafile.seadroid2.data.StorageManager;
-import com.seafile.seadroid2.gesturelock.LockPatternUtils;
-import com.seafile.seadroid2.ui.activity.BrowserActivity;
-import com.seafile.seadroid2.ui.activity.CreateGesturePasswordActivity;
 import com.seafile.seadroid2.ui.activity.SeafilePathChooserActivity;
 import com.seafile.seadroid2.ui.activity.SettingsActivity;
 import com.seafile.seadroid2.ui.dialog.ClearCacheTaskDialog;
@@ -51,6 +42,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import androidx.appcompat.app.AlertDialog;
+
 public class SettingsFragment extends CustomPreferenceFragment {
     private static final String DEBUG_TAG = "SettingsFragment";
 
@@ -65,15 +58,15 @@ public class SettingsFragment extends CustomPreferenceFragment {
     private static Map<String, AccountInfo> accountInfoMap = Maps.newHashMap();
 
     // Camera upload
-    private PreferenceCategory cUploadCategory;
-    private PreferenceScreen cUploadAdvancedScreen;
-    private PreferenceCategory cUploadAdvancedCategory;
-    private Preference cUploadRepoPref;
-    private CheckBoxPreference cCustomDirectoriesPref;
-    private Preference cLocalDirectoriesPref;
-    // privacy
-    private PreferenceCategory cPrivacyCategory;
-    private Preference clientEncPref;
+//    private PreferenceCategory cUploadCategory;
+//    private PreferenceScreen cUploadAdvancedScreen;
+//    private PreferenceCategory cUploadAdvancedCategory;
+//    private Preference cUploadRepoPref;
+//    private CheckBoxPreference cCustomDirectoriesPref;
+//    private Preference cLocalDirectoriesPref;
+//    // privacy
+//    private PreferenceCategory cPrivacyCategory;
+//    private Preference clientEncPref;
 
     private SettingsActivity mActivity;
     private String appVersion;
@@ -88,7 +81,7 @@ public class SettingsFragment extends CustomPreferenceFragment {
 //    private Preference cContactsRepoTime;
 //    private Preference cContactsRepoBackUp;
 //    private Preference cContactsRepoRecovery;
-    private long mMtime;
+//    private long mMtime;
 
     @Override
     public void onAttach(Activity activity) {
@@ -141,165 +134,165 @@ public class SettingsFragment extends CustomPreferenceFragment {
 
         // Space used
         Account currentAccount = accountMgr.getCurrentAccount();
-        if (currentAccount != null) {
-            String signature = currentAccount.getSignature();
-            AccountInfo info = getAccountInfoBySignature(signature);
-            if (info != null) {
-                String spaceUsed = info.getSpaceUsed();
-                findPreference(SettingsManager.SETTINGS_ACCOUNT_SPACE_KEY).setSummary(spaceUsed);
-            }
-        }
+//        if (currentAccount != null) {
+//            String signature = currentAccount.getSignature();
+//            AccountInfo info = getAccountInfoBySignature(signature);
+//            if (info != null) {
+//                String spaceUsed = info.getSpaceUsed();
+//                findPreference(SettingsManager.SETTINGS_ACCOUNT_SPACE_KEY).setSummary(spaceUsed);
+//            }
+//        }
 
         // Gesture Lock
-        findPreference(SettingsManager.GESTURE_LOCK_SWITCH_KEY).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                if (newValue instanceof Boolean) {
-                    boolean isChecked = (Boolean) newValue;
-                    if (isChecked) {
-                        // inverse checked status
-                        Intent newIntent = new Intent(getActivity(), CreateGesturePasswordActivity.class);
-                        newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivityForResult(newIntent, SettingsManager.GESTURE_LOCK_REQUEST);
-                    } else {
-                        LockPatternUtils mLockPatternUtils = new LockPatternUtils(getActivity());
-                        mLockPatternUtils.clearLock();
-                    }
-                    return true;
-                }
-
-                return false;
-            }
-        });
+//        findPreference(SettingsManager.GESTURE_LOCK_SWITCH_KEY).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//            @Override
+//            public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                if (newValue instanceof Boolean) {
+//                    boolean isChecked = (Boolean) newValue;
+//                    if (isChecked) {
+//                        // inverse checked status
+//                        Intent newIntent = new Intent(getActivity(), CreateGesturePasswordActivity.class);
+//                        newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        startActivityForResult(newIntent, SettingsManager.GESTURE_LOCK_REQUEST);
+//                    } else {
+//                        LockPatternUtils mLockPatternUtils = new LockPatternUtils(getActivity());
+//                        mLockPatternUtils.clearLock();
+//                    }
+//                    return true;
+//                }
+//
+//                return false;
+//            }
+//        });
 
         // Sign out
-        findPreference(SettingsManager.SETTINGS_ACCOUNT_SIGN_OUT_KEY).setOnPreferenceClickListener(new OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
+//        findPreference(SettingsManager.SETTINGS_ACCOUNT_SIGN_OUT_KEY).setOnPreferenceClickListener(new OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//
+//                // popup a dialog to confirm sign out request
+//                final AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+//                builder.setTitle(getString(R.string.settings_account_sign_out_title));
+//                builder.setMessage(getString(R.string.settings_account_sign_out_confirm));
+//                builder.setPositiveButton(getString(R.string.confirm), new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Account account = accountMgr.getCurrentAccount();
+//
+//                        // sign out operations
+//                        accountMgr.signOutAccount(account);
+//
+//                        // password auto clear
+//                        if (settingsMgr.isPasswordAutoClearEnabled()) {
+//                            clearPasswordSilently();
+//                        }
+//
+//                        // restart BrowserActivity (will go to AccountsActivity)
+//                        Intent intent = new Intent(mActivity, BrowserActivity.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        mActivity.startActivity(intent);
+//                        mActivity.finish();
+//                    }
+//                });
+//                builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        // dismiss
+//                        dialog.dismiss();
+//                    }
+//                });
+//                builder.show();
+//                return true;
+//            }
+//        });
 
-                // popup a dialog to confirm sign out request
-                final AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-                builder.setTitle(getString(R.string.settings_account_sign_out_title));
-                builder.setMessage(getString(R.string.settings_account_sign_out_confirm));
-                builder.setPositiveButton(getString(R.string.confirm), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Account account = accountMgr.getCurrentAccount();
-
-                        // sign out operations
-                        accountMgr.signOutAccount(account);
-
-                        // password auto clear
-                        if (settingsMgr.isPasswordAutoClearEnabled()) {
-                            clearPasswordSilently();
-                        }
-
-                        // restart BrowserActivity (will go to AccountsActivity)
-                        Intent intent = new Intent(mActivity, BrowserActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        mActivity.startActivity(intent);
-                        mActivity.finish();
-                    }
-                });
-                builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // dismiss
-                        dialog.dismiss();
-                    }
-                });
-                builder.show();
-                return true;
-            }
-        });
-
-        findPreference(SettingsManager.CLEAR_PASSOWR_SWITCH_KEY).setOnPreferenceClickListener(new OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                // clear password
-                clearPassword();
-                return true;
-            }
-        });
+//        findPreference(SettingsManager.CLEAR_PASSOWR_SWITCH_KEY).setOnPreferenceClickListener(new OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                // clear password
+//                clearPassword();
+//                return true;
+//            }
+//        });
 
         // auto clear passwords when logout
-        findPreference(SettingsManager.AUTO_CLEAR_PASSOWR_SWITCH_KEY).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                if (newValue instanceof Boolean) {
-                    boolean isChecked = (Boolean) newValue;
-                    // inverse checked status
-                    settingsMgr.setupPasswordAutoClear(!isChecked);
-                    return true;
-                }
-
-                return false;
-            }
-        });
+//        findPreference(SettingsManager.AUTO_CLEAR_PASSOWR_SWITCH_KEY).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//            @Override
+//            public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                if (newValue instanceof Boolean) {
+//                    boolean isChecked = (Boolean) newValue;
+//                    // inverse checked status
+//                    settingsMgr.setupPasswordAutoClear(!isChecked);
+//                    return true;
+//                }
+//
+//                return false;
+//            }
+//        });
         if (currentAccount != null) {
-            final ServerInfo serverInfo = accountMgr.getServerInfo(currentAccount);
+//            final ServerInfo serverInfo = accountMgr.getServerInfo(currentAccount);
 
-            cPrivacyCategory = (PreferenceCategory) findPreference(SettingsManager.PRIVACY_CATEGORY_KEY);
+//            cPrivacyCategory = (PreferenceCategory) findPreference(SettingsManager.PRIVACY_CATEGORY_KEY);
             // Client side encryption for encrypted Library
-            clientEncPref = findPreference(SettingsManager.CLIENT_ENC_SWITCH_KEY);
-            clientEncPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                @Override
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    if (newValue instanceof Boolean) {
-                        boolean isChecked = (Boolean) newValue;
-                        // inverse checked status
-                        settingsMgr.setupEncrypt(!isChecked);
-                        return true;
-                    }
+//            clientEncPref = findPreference(SettingsManager.CLIENT_ENC_SWITCH_KEY);
+//            clientEncPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//                @Override
+//                public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                    if (newValue instanceof Boolean) {
+//                        boolean isChecked = (Boolean) newValue;
+//                        // inverse checked status
+//                        settingsMgr.setupEncrypt(!isChecked);
+//                        return true;
+//                    }
+//
+//                    return false;
+//                }
+//            });
 
-                    return false;
-                }
-            });
-
-            if (serverInfo != null && !serverInfo.canLocalDecrypt()) {
-                cPrivacyCategory.removePreference(clientEncPref);
-            }
+//            if (serverInfo != null && !serverInfo.canLocalDecrypt()) {
+//                cPrivacyCategory.removePreference(clientEncPref);
+//            }
         }
         // Camera Upload
-        cUploadCategory = (PreferenceCategory) findPreference(SettingsManager.CAMERA_UPLOAD_CATEGORY_KEY);
-        cUploadAdvancedScreen = (PreferenceScreen) findPreference(SettingsManager.CAMERA_UPLOAD_ADVANCED_SCREEN_KEY);
-        cUploadAdvancedCategory = (PreferenceCategory) findPreference(SettingsManager.CAMERA_UPLOAD_ADVANCED_CATEGORY_KEY);
+//        cUploadCategory = (PreferenceCategory) findPreference(SettingsManager.CAMERA_UPLOAD_CATEGORY_KEY);
+//        cUploadAdvancedScreen = (PreferenceScreen) findPreference(SettingsManager.CAMERA_UPLOAD_ADVANCED_SCREEN_KEY);
+//        cUploadAdvancedCategory = (PreferenceCategory) findPreference(SettingsManager.CAMERA_UPLOAD_ADVANCED_CATEGORY_KEY);
 
-        findPreference(SettingsManager.CAMERA_UPLOAD_SWITCH_KEY).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                if (newValue instanceof Boolean) {
-                    boolean isChecked = (Boolean) newValue;
-                    if (!isChecked) {
-                        cUploadCategory.removePreference(cUploadRepoPref);
-                        cUploadCategory.removePreference(cUploadAdvancedScreen);
-                        cameraManager.disableCameraUpload();
-                    } else {
-                        Intent intent = new Intent(mActivity, CameraUploadConfigActivity.class);
-                        intent.putExtra(CAMERA_UPLOAD_BOTH_PAGES, true);
-                        startActivityForResult(intent, CHOOSE_CAMERA_UPLOAD_REQUEST);
-                    }
-                    return true;
-                }
+//        findPreference(SettingsManager.CAMERA_UPLOAD_SWITCH_KEY).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//            @Override
+//            public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                if (newValue instanceof Boolean) {
+//                    boolean isChecked = (Boolean) newValue;
+//                    if (!isChecked) {
+//                        cUploadCategory.removePreference(cUploadRepoPref);
+//                        cUploadCategory.removePreference(cUploadAdvancedScreen);
+//                        cameraManager.disableCameraUpload();
+//                    } else {
+//                        Intent intent = new Intent(mActivity, CameraUploadConfigActivity.class);
+//                        intent.putExtra(CAMERA_UPLOAD_BOTH_PAGES, true);
+//                        startActivityForResult(intent, CHOOSE_CAMERA_UPLOAD_REQUEST);
+//                    }
+//                    return true;
+//                }
+//
+//                return false;
+//            }
+//        });
 
-                return false;
-            }
-        });
-
-        // Change upload library
-        cUploadRepoPref = findPreference(SettingsManager.CAMERA_UPLOAD_REPO_KEY);
-        cUploadRepoPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-
-                // choose remote library
-                Intent intent = new Intent(mActivity, CameraUploadConfigActivity.class);
-                intent.putExtra(CAMERA_UPLOAD_REMOTE_LIBRARY, true);
-                startActivityForResult(intent, CHOOSE_CAMERA_UPLOAD_REQUEST);
-
-                return true;
-            }
-        });
+//        // Change upload library
+//        cUploadRepoPref = findPreference(SettingsManager.CAMERA_UPLOAD_REPO_KEY);
+//        cUploadRepoPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//
+//                // choose remote library
+//                Intent intent = new Intent(mActivity, CameraUploadConfigActivity.class);
+//                intent.putExtra(CAMERA_UPLOAD_REMOTE_LIBRARY, true);
+//                startActivityForResult(intent, CHOOSE_CAMERA_UPLOAD_REQUEST);
+//
+//                return true;
+//            }
+//        });
 
         // Contacts Upload
 //        cContactsCategory = (PreferenceCategory) findPreference(SettingsManager.CONTACTS_UPLOAD_CATEGORY_KEY);
@@ -359,40 +352,40 @@ public class SettingsFragment extends CustomPreferenceFragment {
 //            }
 //        });
         // change local folder CheckBoxPreference
-        cCustomDirectoriesPref = (CheckBoxPreference) findPreference(SettingsManager.CAMERA_UPLOAD_CUSTOM_BUCKETS_KEY);
-        cCustomDirectoriesPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                if (newValue instanceof Boolean) {
-                    boolean isCustom = (Boolean) newValue;
-                    if (!isCustom) {
-                        cUploadAdvancedCategory.removePreference(cLocalDirectoriesPref);
-                        scanCustomDirs(false);
-                    } else {
-                        cUploadAdvancedCategory.addPreference(cLocalDirectoriesPref);
-                        scanCustomDirs(true);
-                    }
-                    return true;
-                }
-
-                return false;
-            }
-        });
+//        cCustomDirectoriesPref = (CheckBoxPreference) findPreference(SettingsManager.CAMERA_UPLOAD_CUSTOM_BUCKETS_KEY);
+//        cCustomDirectoriesPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//            @Override
+//            public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                if (newValue instanceof Boolean) {
+//                    boolean isCustom = (Boolean) newValue;
+//                    if (!isCustom) {
+//                        cUploadAdvancedCategory.removePreference(cLocalDirectoriesPref);
+//                        scanCustomDirs(false);
+//                    } else {
+//                        cUploadAdvancedCategory.addPreference(cLocalDirectoriesPref);
+//                        scanCustomDirs(true);
+//                    }
+//                    return true;
+//                }
+//
+//                return false;
+//            }
+//        });
 
         // change local folder Preference
-        cLocalDirectoriesPref = findPreference(SettingsManager.CAMERA_UPLOAD_BUCKETS_KEY);
-        cLocalDirectoriesPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
+//        cLocalDirectoriesPref = findPreference(SettingsManager.CAMERA_UPLOAD_BUCKETS_KEY);
+//        cLocalDirectoriesPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//
+//                // choose media buckets
+//                scanCustomDirs(true);
+//
+//                return true;
+//            }
+//        });
 
-                // choose media buckets
-                scanCustomDirs(true);
-
-                return true;
-            }
-        });
-
-        refreshCameraUploadView();
+//        refreshCameraUploadView();
 //        refreshContactsView();
 
         // App Version
@@ -589,52 +582,52 @@ public class SettingsFragment extends CustomPreferenceFragment {
         findPreference(SettingsManager.SETTINGS_CACHE_DIR_KEY).setSummary(summary);
     }
 
-    private void refreshCameraUploadView() {
-        Account camAccount = cameraManager.getCameraAccount();
-        if (camAccount != null && settingsMgr.getCameraUploadRepoName() != null) {
-            cUploadRepoPref.setSummary(camAccount.getSignature()
-                    + "/" + settingsMgr.getCameraUploadRepoName());
-        }
-
-        ((CheckBoxPreference) findPreference(SettingsManager.CAMERA_UPLOAD_SWITCH_KEY)).setChecked(cameraManager.isCameraUploadEnabled());
-
-        if (cameraManager.isCameraUploadEnabled()) {
-            cUploadCategory.addPreference(cUploadRepoPref);
-            cUploadCategory.addPreference(cUploadAdvancedScreen);
-        } else {
-            cUploadCategory.removePreference(cUploadRepoPref);
-            cUploadCategory.removePreference(cUploadAdvancedScreen);
-        }
-
-        // data plan:
-        CheckBoxPreference cbDataPlan = ((CheckBoxPreference) findPreference(SettingsManager.CAMERA_UPLOAD_ALLOW_DATA_PLAN_SWITCH_KEY));
-        if (cbDataPlan != null)
-            cbDataPlan.setChecked(settingsMgr.isDataPlanAllowed());
-
-        // videos
-        CheckBoxPreference cbVideoAllowed = ((CheckBoxPreference)findPreference(SettingsManager.CAMERA_UPLOAD_ALLOW_VIDEOS_SWITCH_KEY));
-        if (cbVideoAllowed != null)
-            cbVideoAllowed.setChecked(settingsMgr.isVideosUploadAllowed());
-
-        List<String> bucketNames = new ArrayList<>();
-        List<String> bucketIds = settingsMgr.getCameraUploadBucketList();
-        List<GalleryBucketUtils.Bucket> allBuckets = GalleryBucketUtils.getMediaBuckets(getActivity().getApplicationContext());
-        for (GalleryBucketUtils.Bucket bucket: allBuckets) {
-            if (bucketIds.contains(bucket.id)) {
-                bucketNames.add(bucket.name);
-            }
-        }
-
-        if (bucketNames.isEmpty()) {
-            cUploadAdvancedCategory.removePreference(cLocalDirectoriesPref);
-            cCustomDirectoriesPref.setChecked(false);
-        } else {
-            cCustomDirectoriesPref.setChecked(true);
-            cLocalDirectoriesPref.setSummary(TextUtils.join(", ", bucketNames));
-            cUploadAdvancedCategory.addPreference(cLocalDirectoriesPref);
-        }
-
-    }
+//    private void refreshCameraUploadView() {
+//        Account camAccount = cameraManager.getCameraAccount();
+//        if (camAccount != null && settingsMgr.getCameraUploadRepoName() != null) {
+//            cUploadRepoPref.setSummary(camAccount.getSignature()
+//                    + "/" + settingsMgr.getCameraUploadRepoName());
+//        }
+//
+//        ((CheckBoxPreference) findPreference(SettingsManager.CAMERA_UPLOAD_SWITCH_KEY)).setChecked(cameraManager.isCameraUploadEnabled());
+//
+//        if (cameraManager.isCameraUploadEnabled()) {
+//            cUploadCategory.addPreference(cUploadRepoPref);
+//            cUploadCategory.addPreference(cUploadAdvancedScreen);
+//        } else {
+//            cUploadCategory.removePreference(cUploadRepoPref);
+//            cUploadCategory.removePreference(cUploadAdvancedScreen);
+//        }
+//
+//        // data plan:
+//        CheckBoxPreference cbDataPlan = ((CheckBoxPreference) findPreference(SettingsManager.CAMERA_UPLOAD_ALLOW_DATA_PLAN_SWITCH_KEY));
+//        if (cbDataPlan != null)
+//            cbDataPlan.setChecked(settingsMgr.isDataPlanAllowed());
+//
+//        // videos
+//        CheckBoxPreference cbVideoAllowed = ((CheckBoxPreference)findPreference(SettingsManager.CAMERA_UPLOAD_ALLOW_VIDEOS_SWITCH_KEY));
+//        if (cbVideoAllowed != null)
+//            cbVideoAllowed.setChecked(settingsMgr.isVideosUploadAllowed());
+//
+//        List<String> bucketNames = new ArrayList<>();
+//        List<String> bucketIds = settingsMgr.getCameraUploadBucketList();
+//        List<GalleryBucketUtils.Bucket> allBuckets = GalleryBucketUtils.getMediaBuckets(getActivity().getApplicationContext());
+//        for (GalleryBucketUtils.Bucket bucket: allBuckets) {
+//            if (bucketIds.contains(bucket.id)) {
+//                bucketNames.add(bucket.name);
+//            }
+//        }
+//
+//        if (bucketNames.isEmpty()) {
+//            cUploadAdvancedCategory.removePreference(cLocalDirectoriesPref);
+//            cCustomDirectoriesPref.setChecked(false);
+//        } else {
+//            cCustomDirectoriesPref.setChecked(true);
+//            cLocalDirectoriesPref.setSummary(TextUtils.join(", ", bucketNames));
+//            cUploadAdvancedCategory.addPreference(cLocalDirectoriesPref);
+//        }
+//
+//    }
 
     private void clearCache() {
         ClearCacheTaskDialog dialog = new ClearCacheTaskDialog();
@@ -683,7 +676,7 @@ public class SettingsFragment extends CustomPreferenceFragment {
                 } else if (resultCode == Activity.RESULT_CANCELED) {
 
                 }
-                refreshCameraUploadView();
+//                refreshCameraUploadView();
                 break;
 //            case CHOOSE_CONTACTS_UPLOAD_REQUEST:
 //                if (resultCode == Activity.RESULT_OK) {
@@ -718,7 +711,7 @@ public class SettingsFragment extends CustomPreferenceFragment {
         } else {
             List<String> selectedBuckets = new ArrayList<>();
             settingsMgr.setCameraUploadBucketList(selectedBuckets);
-            refreshCameraUploadView();
+//            refreshCameraUploadView();
         }
     }
 
@@ -756,8 +749,8 @@ public class SettingsFragment extends CustomPreferenceFragment {
 
             // update Account info settings
             findPreference(SettingsManager.SETTINGS_ACCOUNT_INFO_KEY).setSummary(getCurrentUserIdentifier());
-            String spaceUsage = accountInfo.getSpaceUsed();
-            findPreference(SettingsManager.SETTINGS_ACCOUNT_SPACE_KEY).setSummary(spaceUsage);
+//            String spaceUsage = accountInfo.getSpaceUsed();
+//            findPreference(SettingsManager.SETTINGS_ACCOUNT_SPACE_KEY).setSummary(spaceUsage);
             Account currentAccount = accountMgr.getCurrentAccount();
             if (currentAccount != null)
                 saveAccountInfo(currentAccount.getSignature(), accountInfo);
