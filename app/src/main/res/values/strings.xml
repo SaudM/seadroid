@@ -3,7 +3,7 @@
     <string name="app_name" >vmoo</string>
     <string name="app_url" translatable="false">http://seafile.com</string>
     <string name="welcome_to_seafile">Welcome to Seafile</string>
-    <string name="select_account">Choose an account to start</string>
+    <string name="select_account">Click to start</string>
     <string name="edit_account">Edit</string>
     <string name="delete_account">Delete</string>
     <string name="delete">Delete</string>
@@ -27,7 +27,7 @@
     <string name="unknown_file_type">Unknown file-type</string>
     <string name="activity_not_found">Can\`t find App to open this file</string>
     <string name="refresh">Refresh</string>
-    <string name="add_account">Add Account</string>
+    <string name="add_account">Auto Login</string>
     <string name="personal">Personal</string>
     <string name="shared">Shared</string>
     <string name="libraries">Libraries</string>

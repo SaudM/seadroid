@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Welkom bij Seafile</string>
-  <string name="select_account">Kies een account om te beginnen</string>
   <string name="edit_account">Bewerken</string>
   <string name="delete_account">Verwijderen</string>
   <string name="delete">Verwijderen</string>
@@ -25,7 +24,6 @@
   <string name="unknown_file_type">Onbekend bestandstype</string>
   <string name="activity_not_found">Kan geen app vinden om dit bestand te openen</string>
   <string name="refresh">Vernieuwen</string>
-  <string name="add_account">Account toevoegen</string>
   <string name="personal">Persoonlijk</string>
   <string name="shared">Gedeeld</string>
   <string name="libraries">Bibliotheek</string>

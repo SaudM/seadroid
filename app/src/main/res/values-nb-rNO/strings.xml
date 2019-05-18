@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Velkommen til Seafile</string>
-  <string name="select_account">Velg en konto for å starte</string>
   <string name="edit_account">Redigere</string>
   <string name="delete_account">Slette</string>
   <string name="delete">Slette</string>
@@ -14,7 +13,6 @@
   <string name="cancel_download">Avbryt</string>
   <string name="activity_not_found">Kan ikke finne et program å åpne denne filen med</string>
   <string name="refresh">Oppfrisk</string>
-  <string name="add_account">Legg til konto</string>
   <string name="personal">Personlig</string>
   <string name="shared">Delt</string>
   <string name="libraries">Biblioteker</string>

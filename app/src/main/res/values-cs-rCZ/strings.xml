@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Vítejte v Seafile</string>
-  <string name="select_account">Nejprve vyberte svůj účet</string>
   <string name="edit_account">Upravit</string>
   <string name="delete">Odstranit</string>
   <string name="delete_file_f">Odstranit soubor</string>
@@ -13,7 +12,6 @@
   <string name="cancel_download">Zrušit</string>
   <string name="activity_not_found">Nelze najít aplikaci pro otevření tohoto souboru</string>
   <string name="refresh">Obnovit</string>
-  <string name="add_account">Přidat účet</string>
   <string name="personal">Osobní</string>
   <string name="libraries">Knihovny</string>
   <string name="cached">V mezipaměti</string>

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Tervetuloa Seafileen</string>
-  <string name="select_account">Valitse tili aloittaaksesi</string>
   <string name="edit_account">Muokkaa</string>
   <string name="delete_account">Poista</string>
   <string name="delete">Poista</string>
@@ -25,7 +24,6 @@
   <string name="unknown_file_type">Tuntematon tiedostotyyppi</string>
   <string name="activity_not_found">Ei löydä sovellusta tämän tiedoston avaamiseksi</string>
   <string name="refresh">Päivitä</string>
-  <string name="add_account">Lisää Tili</string>
   <string name="personal">Henkilökohtainen</string>
   <string name="shared">Jaettu</string>
   <string name="libraries">Kirjastot</string>
