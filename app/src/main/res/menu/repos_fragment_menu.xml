@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/action_mode_delete"
-        android:title="@string/file_action_delete"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_mode_delete"
         android:icon="@drawable/ic_am_del"
+        android:title="@string/file_action_delete"
+        android:visible="false"
         app:showAsAction="always"/>
-    <item android:id="@+id/action_mode_copy"
-        android:title="@string/file_action_copy"
+    <item
+        android:id="@+id/action_mode_copy"
         android:icon="@drawable/ic_am_copy"
+        android:visible="false"
+        android:title="@string/file_action_copy"
         app:showAsAction="always"/>
-    <item android:id="@+id/action_mode_move"
-        android:title="@string/file_action_move"
+    <item
+        android:id="@+id/action_mode_move"
         android:icon="@drawable/ic_am_move"
+        android:visible="false"
+        android:title="@string/file_action_move"
         app:showAsAction="always"/>
-    <item android:id="@+id/action_mode_download"
-        android:title="@string/file_action_download"
+    <item
+        android:id="@+id/action_mode_download"
         android:icon="@drawable/ic_am_download"
+        android:title="@string/file_action_download"
         app:showAsAction="always"/>
 
-    <item android:id="@+id/action_mode_select_all"
-        android:title="@string/transfer_list_select_all"
+    <item
+        android:id="@+id/action_mode_select_all"
         android:icon="@drawable/ic_am_sel_all"
+        android:title="@string/transfer_list_select_all"
         app:showAsAction="always"/>
 </menu>

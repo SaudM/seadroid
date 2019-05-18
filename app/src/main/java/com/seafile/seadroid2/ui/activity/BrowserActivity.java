@@ -496,9 +496,9 @@ public class BrowserActivity extends BaseActivity
 //            case R.id.create_repo:
 //                showNewRepoDialog();
 //                return true;
-            case R.id.add:
-                addFile();
-                return true;
+//            case R.id.add:
+//                addFile();
+//                return true;
 //            case R.id.transfer_tasks:
 //                Intent newIntent = new Intent(this, TransferActivity.class);
 //                newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -909,7 +909,7 @@ public class BrowserActivity extends BaseActivity
     public boolean onPrepareOptionsMenu(Menu menu) {
         menuSearch = menu.findItem(R.id.search);
         MenuItem menuSort = menu.findItem(R.id.sort);
-        MenuItem menuAdd = menu.findItem(R.id.add);
+//        MenuItem menuAdd = menu.findItem(R.id.add);
 //        MenuItem menuCreateRepo = menu.findItem(R.id.create_repo);
         MenuItem menuEdit = menu.findItem(R.id.edit);
 
@@ -917,19 +917,19 @@ public class BrowserActivity extends BaseActivity
         if (currentPosition == 0) {
             if (navContext.inRepo()) {
 //                menuCreateRepo.setVisible(false);
-                menuAdd.setVisible(true);
+//                menuAdd.setVisible(true);
                 menuEdit.setVisible(true);
                 if (hasRepoWritePermission()) {
-                    menuAdd.setEnabled(true);
+//                    menuAdd.setEnabled(true);
                     menuEdit.setEnabled(true);
                 } else {
-                    menuAdd.setEnabled(false);
+//                    menuAdd.setEnabled(false);
                     menuEdit.setEnabled(false);
                 }
 
             } else {
 //                menuCreateRepo.setVisible(true);
-                menuAdd.setVisible(false);
+//                menuAdd.setVisible(false);
                 menuEdit.setVisible(false);
             }
 
@@ -937,7 +937,7 @@ public class BrowserActivity extends BaseActivity
         } else {
             menuSort.setVisible(false);
 //            menuCreateRepo.setVisible(false);
-            menuAdd.setVisible(false);
+//            menuAdd.setVisible(false);
             menuEdit.setVisible(false);
         }
 
