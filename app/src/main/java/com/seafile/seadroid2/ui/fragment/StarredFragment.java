@@ -3,12 +3,8 @@ package com.seafile.seadroid2.ui.fragment;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.fragment.app.ListFragment;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.appcompat.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +25,10 @@ import com.seafile.seadroid2.util.ConcurrentAsyncTask;
 import com.seafile.seadroid2.util.Utils;
 
 import java.util.List;
+
+import androidx.appcompat.view.ActionMode;
+import androidx.fragment.app.ListFragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class StarredFragment extends ListFragment {
     private StarredItemAdapter adapter;
@@ -462,8 +462,8 @@ public class StarredFragment extends ListFragment {
         @Override
         public boolean onCreateActionMode(ActionMode mode, Menu menu) {
             // Inflate the menu for the contextual action bar (CAB)
-            MenuInflater inflater = mode.getMenuInflater();
-            inflater.inflate(R.menu.starred_fragment_menu, menu);
+//            MenuInflater inflater = mode.getMenuInflater();
+//            inflater.inflate(R.menu.starred_fragment_menu, menu);
             if (adapter == null) return true;
 
             adapter.setActionModeOn(true);
@@ -496,29 +496,29 @@ public class StarredFragment extends ListFragment {
                 }
             }
 
-            switch (item.getItemId()) {
-                case R.id.action_mode_select_all:
-                    if (!allItemsSelected) {
-                        if (adapter == null) return true;
-
-                        adapter.selectAllItems();
-                        updateContextualActionBar();
-                    } else {
-                        if (adapter == null) return true;
-
-                        adapter.deselectAllItems();
-                        updateContextualActionBar();
-                    }
-
-                    allItemsSelected = !allItemsSelected;
-                    break;
-                case R.id.action_mode_delete:
-                    unStarFiles(starredFiles);
-                    break;
-
-                default:
-                    return false;
-            }
+//            switch (item.getItemId()) {
+//                case R.id.action_mode_select_all:
+//                    if (!allItemsSelected) {
+//                        if (adapter == null) return true;
+//
+//                        adapter.selectAllItems();
+//                        updateContextualActionBar();
+//                    } else {
+//                        if (adapter == null) return true;
+//
+//                        adapter.deselectAllItems();
+//                        updateContextualActionBar();
+//                    }
+//
+//                    allItemsSelected = !allItemsSelected;
+//                    break;
+//                case R.id.action_mode_delete:
+//                    unStarFiles(starredFiles);
+//                    break;
+//
+//                default:
+//                    return false;
+//            }
 
             return true;
         }

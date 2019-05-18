@@ -7,6 +7,7 @@
           android:icon="@drawable/ic_am_download"
           app:showAsAction="always"/>
     <item android:id="@+id/action_mode_delete"
+          android:visible="false"
           android:title="@string/file_action_delete"
           android:icon="@drawable/ic_am_del"
           app:showAsAction="always"/>
