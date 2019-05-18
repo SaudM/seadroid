@@ -89,7 +89,7 @@ public class ActivitiesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activities_fragment, container, false);
     }
 
@@ -99,8 +99,8 @@ public class ActivitiesFragment extends Fragment {
         refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh);
         listView = (ListView) view.findViewById(R.id.activities_listview);
         mEmptyView = (ImageView) view.findViewById(R.id.empty);
-        mListContainer =  view.findViewById(R.id.fl_activities_list_container);
-        mErrorText = (TextView)view.findViewById(R.id.error_message);
+        mListContainer = view.findViewById(R.id.fl_activities_list_container);
+        mErrorText = (TextView) view.findViewById(R.id.error_message);
         mProgressContainer = view.findViewById(R.id.progressContainer);
 
         events = Lists.newArrayList();
@@ -182,7 +182,8 @@ public class ActivitiesFragment extends Fragment {
             }
 
             @Override
-            public void onScroll(AbsListView absListView, int i, int i1, int i2) {}
+            public void onScroll(AbsListView absListView, int i, int i1, int i2) {
+            }
         });
 
         mRefreshType = REFRESH_ON_PULL_DOWN_RESUME;
@@ -276,7 +277,8 @@ public class ActivitiesFragment extends Fragment {
         }
 
         ppwContainerView = new RelativeLayout(mActivity);
-        ppwContainerView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        ppwContainerView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT));
 
         underLine = new View(getContext());
         underLine.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, Utils.dip2px(mActivity, 1.0f)));
@@ -287,7 +289,8 @@ public class ActivitiesFragment extends Fragment {
         ppw = (RelativeLayout) View.inflate(mActivity, R.layout.ppw_history_changes, null);
 
         maskView = new View(getContext());
-        maskView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        maskView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT));
         maskView.setBackgroundColor(maskColor);
         maskView.setOnClickListener(new View.OnClickListener() {
             @Override
