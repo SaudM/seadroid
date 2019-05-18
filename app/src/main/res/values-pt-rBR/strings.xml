@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Bem vindo ao Seafile</string>
-  <string name="select_account">Escolha uma conta para começar</string>
   <string name="edit_account">Editar</string>
   <string name="delete_account">Deletar</string>
   <string name="delete">Deletar</string>
@@ -14,7 +13,6 @@
   <string name="cancel_download">Cancelar</string>
   <string name="activity_not_found">Aplicativo para abrir esse arquivo não encontrado</string>
   <string name="refresh">Recarregar</string>
-  <string name="add_account">Adicionar Conta</string>
   <string name="personal">Pessoal</string>
   <string name="shared">Compartilhadas</string>
   <string name="libraries">Bibliotecas</string>

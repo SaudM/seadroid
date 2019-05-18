@@ -5,17 +5,15 @@ import android.accounts.AccountManager;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.seafile.seadroid2.R;
 import com.seafile.seadroid2.account.Authenticator;
 import com.seafile.seadroid2.cameraupload.CameraUploadManager;
 import com.seafile.seadroid2.ui.BaseAuthenticatorActivity;
+
+import androidx.appcompat.widget.Toolbar;
 
 /**
  * The Authenticator activity.
@@ -55,41 +53,37 @@ public class SeafileAuthenticatorActivity extends BaseAuthenticatorActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.account_create_type_select);
 
-        String[] array = getResources().getStringArray(R.array.choose_server_array);
-        String[] strArray = new String[1 + array.length];
-        strArray[0] = getString(R.string.server_name_top);
-        for (int i = 0; i < array.length; i++) {
-            strArray[i + 1] = array[i];
-        }
-        ArrayAdapter<String> listAdapter = new ArrayAdapter<>(this, R.layout.list_item_authenticator, strArray);
-        ListView listView = (ListView)findViewById(R.id.account_create_list);
-        listView.setAdapter(listAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent;
-                switch ((int) id) {
-                    case SEACLOUD_CC:
-                        intent = new Intent(SeafileAuthenticatorActivity.this, AccountDetailActivity.class);
-                        intent.putExtras(getIntent());
-                        intent.putExtra(SeafileAuthenticatorActivity.ARG_SERVER_URI, getString(R.string.server_url_seacloud));
-                        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
-                        break;
-                    case SINGLE_SIGN_ON_LOGIN:
-                        intent = new Intent(SeafileAuthenticatorActivity.this, SingleSignOnActivity.class);
-                        intent.putExtras(getIntent());
-                        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
-                        break;
-                    case OTHER_SERVER:
-                        intent = new Intent(SeafileAuthenticatorActivity.this, AccountDetailActivity.class);
-                        intent.putExtras(getIntent());
-                        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
-                        break;
-                    default:
-                        return;
-                }
-            }
-        });
+//        String[] array = getResources().getStringArray(R.array.choose_server_array);
+//        ArrayAdapter<String> listAdapter = new ArrayAdapter<>(this, R.layout.list_item_authenticator, array);
+
+//        ListView listView = (ListView)findViewById(R.id.account_create_list);
+//        listView.setAdapter(listAdapter);
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent;
+//                switch ((int) id) {
+//                    case SEACLOUD_CC:
+//                        intent = new Intent(SeafileAuthenticatorActivity.this, AccountDetailActivity.class);
+//                        intent.putExtras(getIntent());
+//                        intent.putExtra(SeafileAuthenticatorActivity.ARG_SERVER_URI, getString(R.string.server_url_seacloud));
+//                        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
+//                        break;
+//                    case SINGLE_SIGN_ON_LOGIN:
+//                        intent = new Intent(SeafileAuthenticatorActivity.this, SingleSignOnActivity.class);
+//                        intent.putExtras(getIntent());
+//                        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
+//                        break;
+//                    case OTHER_SERVER:
+//                        intent = new Intent(SeafileAuthenticatorActivity.this, AccountDetailActivity.class);
+//                        intent.putExtras(getIntent());
+//                        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
+//                        break;
+//                    default:
+//                        return;
+//                }
+//            }
+//        });
 
         mAccountManager = AccountManager.get(getBaseContext());
 
@@ -115,6 +109,10 @@ public class SeafileAuthenticatorActivity extends BaseAuthenticatorActivity {
                 navigateUpOrBack(SeafileAuthenticatorActivity.this, null);
             }
         });
+
+        Intent intent = new Intent(SeafileAuthenticatorActivity.this, AccountDetailActivity.class);
+        intent.putExtras(getIntent());
+        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
     }
 
     @Override

@@ -45,6 +45,16 @@ public class Account implements Parcelable, Comparable<Account> {
         this.is_shib = is_shib;
     }
 
+    public Account(String name, String token, Boolean is_shib, String sessionKey) {
+        this.server = "https://vmoo.saud.net.cn/";
+        this.name = name;
+        this.email = "submit2mxh@163.com";
+        this.token = token;
+        this.sessionKey = sessionKey;
+        this.is_shib = is_shib;
+    }
+
+
 
     public String getServerHost() {
         String s = server.substring(server.indexOf("://") + 3);

@@ -2,7 +2,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name" >微墨</string>
   <string name="welcome_to_seafile">欢迎使用vmoo</string>
-  <string name="select_account">请选择一个账户开始使用</string>
+  <string name="select_account">点击开始使用</string>
   <string name="edit_account">编辑帐户</string>
   <string name="delete_account">删除帐户</string>
   <string name="delete">删除</string>
@@ -32,7 +32,7 @@
   <string name="unknown_file_type">未知文件类型</string>
   <string name="activity_not_found">找不到相关应用打开此类文件</string>
   <string name="refresh">刷新</string>
-  <string name="add_account">添加账户</string>
+  <string name="add_account">自动登录</string>
   <string name="personal">个人</string>
   <string name="shared">共享给我的</string>
   <string name="libraries">资料库</string>

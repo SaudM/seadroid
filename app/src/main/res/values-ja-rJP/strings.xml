@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Seafile にようこそ</string>
-  <string name="select_account">アカウントを選択して始めましょう</string>
   <string name="edit_account">編集</string>
   <string name="delete_account">削除</string>
   <string name="delete">削除</string>
@@ -31,7 +30,6 @@
   <string name="unknown_file_type">不明なファイルタイプ</string>
   <string name="activity_not_found">このファイルを開くアプリが見つかりません</string>
   <string name="refresh">更新</string>
-  <string name="add_account">アカウントを追加</string>
   <string name="personal">個人</string>
   <string name="shared">共有された</string>
   <string name="libraries">ライブラリー</string>

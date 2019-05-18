@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Üdvözlöm a Seafile-ban</string>
-  <string name="select_account">Válasszon egy fiókot</string>
   <string name="edit_account">Szerkeszt</string>
   <string name="delete_account">Töröl</string>
   <string name="delete">Töröl</string>
@@ -25,7 +24,6 @@
   <string name="unknown_file_type">Ismeretlen fájltípus</string>
   <string name="activity_not_found">Nem található olyan alkalmazás amivel a fájlt meg lehet nyitni</string>
   <string name="refresh">Frissít</string>
-  <string name="add_account">Fiók hozzáadása</string>
   <string name="personal">Személyes</string>
   <string name="shared">Megosztva</string>
   <string name="libraries">Kötetek</string>

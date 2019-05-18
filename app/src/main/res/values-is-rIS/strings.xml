@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="welcome_to_seafile">Velkomin í Seafile</string>
-  <string name="select_account">Veldu reikning til að byrja</string>
   <string name="edit_account">Breyta</string>
   <string name="delete_account">Eyða</string>
   <string name="delete">Eyða</string>
@@ -14,7 +13,6 @@
   <string name="cancel_download">Hætta við</string>
   <string name="activity_not_found">Finn ekki App til að opna þessa skrá</string>
   <string name="refresh">Endurglæða</string>
-  <string name="add_account">Bæta við reikningi</string>
   <string name="personal">Persónulegt</string>
   <string name="shared">Deilt</string>
   <string name="libraries">Söfn</string>
