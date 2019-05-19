@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 
 import com.seafile.seadroid2.R;
+import com.seafile.vmoo.util.Utils;
 
 import java.text.SimpleDateFormat;
 

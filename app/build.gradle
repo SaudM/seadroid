@@ -3,15 +3,15 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId 'com.seafile.seadroid2'
+        applicationId 'com.seafile.vmoo'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"
         multiDexEnabled true
         resValue "string", "authorities", applicationId + '.cameraupload.provider'
-        resValue "string", "account_type", "com.seafile.seadroid2.account.api2"
-        buildConfigField "String", "ACCOUNT_TYPE", '"com.seafile.seadroid2.account.api2"'
+        resValue "string", "account_type", "com.seafile.vmoo.account.api2"
+        buildConfigField "String", "ACCOUNT_TYPE", '"com.seafile.vmoo.account.api2"'
         ndk {
             abiFilters 'armeabi', 'armeabi-v7a', 'x86'
         }
@@ -58,18 +58,16 @@ android {
             debuggable true
             applicationIdSuffix ".debug"
             resValue "string", "authorities", defaultConfig.applicationId + '.debug.cameraupload.provider'
-            resValue "string", "account_type", "com.seafile.seadroid2.debug.account.api2"
-            buildConfigField "String", "ACCOUNT_TYPE", '"com.seafile.seadroid2.debug.account.api2"'
-            signingConfig signingConfigs.debug
+            resValue "string", "account_type", "com.seafile.vmoo.debug.account.api2"
+            buildConfigField "String", "ACCOUNT_TYPE", '"com.seafile.vmoo.debug.account.api2"'
+//            signingConfig signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             applicationVariants.all { variant ->
                 variant.outputs.all {
-//                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
                     if (variant.name == "debug")
                         outputFileName = "seafile-debug-${variant.versionName}.apk"
                 }
-//                }
             }
         }
         release {
@@ -78,11 +76,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             applicationVariants.all { variant ->
                 variant.outputs.all {
-//                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
                     if (variant.name == "release") {
-                        outputFileName = "seafile-${variant.versionName}.apk"
+                        outputFileName = "vmoo-${variant.versionName}.apk"
                     }
-//                    }
                 }
             }
         }

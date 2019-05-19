@@ -1,11 +1,11 @@
 package com.seafile.seadroid2.util;
 
+import com.seafile.vmoo.util.Utils;
+
 import org.junit.Test;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
-
-import java.text.DecimalFormat;
 
 @RunWith(RobolectricTestRunner.class)
 public class UtilsTest {
