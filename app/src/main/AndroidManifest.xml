@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.seafile.seadroid2">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.seafile.seadroid2">
 
     <uses-sdk
-        tools:overrideLibrary="us.feras.mdv" />
+        tools:overrideLibrary="us.feras.mdv"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <!-- to start monitor services during boot -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -18,183 +18,208 @@
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
 
     <!-- get list of Seadroid accounts -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
         android:maxSdkVersion="22"/>
 
     <!--Set/Get the auth token from the account manager -->
-    <uses-permission android:name="android.permission.USE_CREDENTIALS"
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"
         android:maxSdkVersion="22"/>
-    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
         android:maxSdkVersion="22"/>
 
     <!-- Add/Remove/Update Seafile accounts -->
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCOUNTS"
         android:maxSdkVersion="22"/>
 
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
     <!--<uses-permission android:name="android.permission.READ_CONTACTS"/>-->
     <!--<uses-permission android:name="android.permission.WRITE_CONTACTS"/>-->
-    <permission android:name="oem.permission.SENDMAIL"
+    <permission
+        android:name="oem.permission.SENDMAIL"
         android:protectionLevel="normal"/>
 
 
     <application
-        android:allowBackup="true"
         android:name="com.seafile.vmoo.SeadroidApplication"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme"
         tools:targetApi="n">
 
-        <activity android:name="com.seafile.vmoo.ui.activity.AccountsActivity"
-                  android:launchMode="singleTop"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.AccountsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.account.ui.SingleSignOnActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.account.ui.SingleSignOnActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.account.ui.SingleSignOnAuthorizeActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.account.ui.SingleSignOnAuthorizeActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.SettingsActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.SettingsActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.BrowserActivity"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-                  android:launchMode="singleTop">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.BrowserActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <activity
             android:name="com.seafile.vmoo.ui.activity.UnlockGesturePasswordActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name="com.seafile.vmoo.ui.activity.CreateGesturePasswordActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.MarkdownActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.MarkdownActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.account.ui.AccountDetailActivity"
-                  android:parentActivityName="com.seafile.vmoo.ui.activity.AccountsActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.account.ui.AccountDetailActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.seafile.vmoo.ui.activity.AccountsActivity">
         </activity>
 
         <!-- MultipleImageSelectionActivity uses the default theme, instead of
              ActionBarSherlock -->
-        <activity android:name="com.seafile.vmoo.gallery.MultipleImageSelectionActivity"
-                  android:theme="@style/AppTheme.Multiple"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.gallery.MultipleImageSelectionActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Multiple">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.ShareToSeafileActivity"
-                  android:excludeFromRecents="true"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.ShareToSeafileActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.SEND" />-->
-                <!--<category android:name="android.intent.category.DEFAULT" />-->
-                <!--<data android:mimeType="*/*" />-->
+            <!--<action android:name="android.intent.action.SEND" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<data android:mimeType="*/*" />-->
             <!--</intent-filter>-->
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.SEND_MULTIPLE" />-->
-                <!--<category android:name="android.intent.category.DEFAULT" />-->
-                <!--<data android:mimeType="*/*" />-->
+            <!--<action android:name="android.intent.action.SEND_MULTIPLE" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<data android:mimeType="*/*" />-->
             <!--</intent-filter>-->
         </activity>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.SeafilePathChooserActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.SeafilePathChooserActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.FileActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.FileActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.account.ui.SeafileAuthenticatorActivity"
-                  android:parentActivityName="com.seafile.vmoo.ui.activity.AccountsActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.account.ui.SeafileAuthenticatorActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.seafile.vmoo.ui.activity.AccountsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.seafile.vmoo.ui.activity.AccountsActivity" />
+                android:value="com.seafile.vmoo.ui.activity.AccountsActivity"/>
         </activity>
 
-        <activity android:name="com.seafile.vmoo.fileschooser.MultiFileChooserActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.fileschooser.MultiFileChooserActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.TransferActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.TransferActivity"
+            android:label="@string/app_name">
         </activity>
 
-        <activity android:name="com.seafile.vmoo.ui.activity.SearchActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.SearchActivity"
+            android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
         </activity>
 
-        <activity android:name="com.seafile.vmoo.cameraupload.CameraUploadConfigActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.cameraupload.CameraUploadConfigActivity"
+            android:label="@string/app_name">
         </activity>
         <!--<activity android:name=" cameraupload.ContactsUploadConfigActivity"-->
-                  <!--android:label="@string/app_name">-->
+        <!--android:label="@string/app_name">-->
         <!--</activity>-->
 
-        <activity android:name="com.seafile.vmoo.ui.activity.GalleryActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name="com.seafile.vmoo.ui.activity.GalleryActivity"
+            android:label="@string/app_name">
         </activity>
         <activity
             android:name="com.seafile.vmoo.play.PlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
             android:screenOrientation="sensor"
-            android:theme="@style/Theme.Fullscreen"
-            android:label="@string/app_name">
+            android:theme="@style/Theme.Fullscreen">
         </activity>
         <activity
             android:name="com.seafile.vmoo.editor.EditorActivity"
+            android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Editor"
-            android:label="@string/app_name">
+            android:theme="@style/AppTheme.Editor">
         </activity>
 
         <provider
             android:name="com.seafile.vmoo.provider.SeafileProvider"
             android:authorities="${applicationId}"
+            android:enabled="@bool/atLeastKitKat"
             android:exported="true"
             android:grantUriPermissions="true"
-            android:permission="android.permission.MANAGE_DOCUMENTS"
-            android:enabled="@bool/atLeastKitKat">
+            android:permission="android.permission.MANAGE_DOCUMENTS">
             <intent-filter>
-                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
             </intent-filter>
         </provider>
-        <service android:name="com.seafile.vmoo.transfer.TransferService" > </service>
-        <service android:name="com.seafile.vmoo.monitor.FileMonitorService" > </service>
-        <service android:name="com.seafile.vmoo.cameraupload.MediaObserverService" />
+
+        <service android:name="com.seafile.vmoo.transfer.TransferService"></service>
+        <service android:name="com.seafile.vmoo.monitor.FileMonitorService"></service>
+        <service android:name="com.seafile.vmoo.cameraupload.MediaObserverService"/>
 
         <provider
             android:name="com.seafile.vmoo.cameraupload.StubContentProvider"
             android:authorities="${applicationId}.cameraupload.provider"
-            android:label="@string/sync_provider_camera_upload"
             android:exported="false"
+            android:label="@string/sync_provider_camera_upload"
             android:syncable="true"/>
 
         <provider
+
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
@@ -204,24 +229,28 @@
                 android:resource="@xml/file_paths"/>
         </provider>
 
-        <service android:name="com.seafile.vmoo.account.AuthenticatorService"
-                 android:exported="false">
+        <service
+            android:name="com.seafile.vmoo.account.AuthenticatorService"
+            android:exported="false">
 
             <intent-filter>
-                <action android:name="android.accounts.AccountAuthenticator" />
+                <action android:name="android.accounts.AccountAuthenticator"/>
             </intent-filter>
-            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator" />
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator"/>
         </service>
 
         <service
             android:name="com.seafile.vmoo.cameraupload.CameraSyncService"
-            android:permission="oem.permission.SENDMAIL"
-            android:exported="true">
+            android:exported="true"
+            android:permission="oem.permission.SENDMAIL">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter"/>
             </intent-filter>
-            <meta-data android:name="android.content.SyncAdapter"
-                       android:resource="@xml/cameraadapter" />
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/cameraadapter"/>
         </service>
 
         <service
@@ -230,10 +259,10 @@
 
         <receiver android:name="com.seafile.vmoo.BootAutostart">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
             </intent-filter>
         </receiver>
     </application>
