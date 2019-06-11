@@ -11,7 +11,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.MediaStore.Images;
-import androidx.appcompat.app.AlertDialog;
 import android.util.Log;
 
 import com.google.common.collect.Lists;
@@ -35,6 +34,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.appcompat.app.AlertDialog;
 
 public class ShareToSeafileActivity extends BaseActivity {
     private static final String DEBUG_TAG = "ShareToSeafileActivity";
