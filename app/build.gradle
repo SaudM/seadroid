@@ -8,13 +8,19 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 2
         versionName "1.0.1"
-//        multiDexEnabled true
+        multiDexEnabled true
         resValue "string", "authorities", applicationId + '.cameraupload.provider'
         resValue "string", "account_type", "com.seafile.vmoo.account.api2"
         buildConfigField "String", "ACCOUNT_TYPE", '"com.seafile.vmoo.account.api2"'
         ndk {
             abiFilters 'armeabi', 'armeabi-v7a', 'x86'
         }
+
+        //versionName需要打包时手动设置，versionCode已自动设置
+        multiDexEnabled true  // dex突破65535的限制
+        //如果需要在4.x系统上安装debug版本(非tinker编译)则需要打开以下两个配置
+        multiDexKeepFile file('multidex_maindex_classes_keep.txt')
+        multiDexKeepProguard file('multidex_maindex_classes.pro')
     }
 
     lintOptions {
@@ -99,7 +105,10 @@ dependencies {
     implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
     implementation 'com.github.kevinsawicki:http-request:6.0'
     implementation 'commons-io:commons-io:2.6'
-    implementation 'com.google.guava:guava:27.1-jre'
+//    implementation 'com.google.guava:guava:28.0-jre'
+//    api 'com.google.guava:guava:28.0-android'
+    implementation 'com.google.guava:guava:18.0'
+    api 'com.google.guava:failureaccess:1.0.1'
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
 //    implementation 'com.cocosw:bottomsheet:1.+@aar'
     implementation 'com.commit451:PhotoView:1.2.4'
