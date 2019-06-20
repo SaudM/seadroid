@@ -1,0 +1,2 @@
+-keep class com.google.common.base{*;}
+-keep class com.google.common.collect.Lists
