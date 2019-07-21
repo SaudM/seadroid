@@ -2,7 +2,7 @@
 
 The application has been published onto the market for easy access:
 
-[![Get it on HUAWEI](http://www.android.com/images/brand/get_it_on_play_logo_small.png)](http://a.vmall.com/uowap/index.html#/detailApp/C100807113)
+[![Get it on HUAWEI](https://vmoo.saud.net.cn/f/021aac230cf74330833e/?dl=1)](http://a.vmall.com/uowap/index.html#/detailApp/C100807113)
 [![Get it on MIMUI](http://app.mi.com/assets/img/slice/logo.png)](http://app.mi.com/details?id=com.seafile.vmoo&ref=search)
 
 ## Contributors
