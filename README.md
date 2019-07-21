@@ -2,7 +2,8 @@
 
 The application has been published onto the market for easy access:
 
-[![Get it on HUAWEI](https://vmoo.saud.net.cn/f/021aac230cf74330833e/?dl=1)](http://a.vmall.com/uowap/index.html#/detailApp/C100807113)
+[![Get it on HUAWEI](https://developer-portalres-drcn.dbankcdn.com/consumer/cn/sites/default/files/ueditor/1/upload/image/20190417/1555494179948419.png
+)](http://a.vmall.com/uowap/index.html#/detailApp/C100807113)
 [![Get it on MIMUI](http://app.mi.com/assets/img/slice/logo.png)](http://app.mi.com/details?id=com.seafile.vmoo&ref=search)
 
 ## Contributors
