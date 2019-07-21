@@ -2,7 +2,7 @@
 
 The application has been published onto the market for easy access:
 
-[![Get it on HUAWEI](https://android-artworks.25pp.com/fs08/2019/06/04/10/106_fb26d4e9fad8e6e9ba2c06224dd420ac_con_130x130.png)](http://a.vmall.com/uowap/index.html#/detailApp/C100807113)
+[![Get it on HUAWEI](https://vmoo.saud.net.cn/thumbnail/021aac230cf74330833e/1024/hlogo.png)](http://a.vmall.com/uowap/index.html#/detailApp/C100807113)
 [![Get it on MIMUI](http://app.mi.com/assets/img/slice/logo.png)](http://app.mi.com/details?id=com.seafile.vmoo&ref=search)
 
 ## Contributors
