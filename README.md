@@ -1,13 +1,13 @@
-# Seafile Android Client [![Build Status](https://secure.travis-ci.org/haiwen/seadroid.png?branch=master)](http://travis-ci.org/haiwen/seadroid)
+# VMOO Android Client 
 
 The application has been published onto the market for easy access:
 
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.seafile.seadroid2)
-[![Get it on F-Droid](https://cloud.githubusercontent.com/assets/12447257/8024903/ce8dca32-0d44-11e5-95b0-e97d1d027351.png)](https://f-droid.org/repository/browse/?fdid=com.seafile.seadroid2)
+[![Get it on HUAWEI](http://www.android.com/images/brand/get_it_on_play_logo_small.png)](http://a.vmall.com/uowap/index.html#/detailApp/C100807113)
+[![Get it on MIMUI](http://app.mi.com/assets/img/slice/logo.png)](http://app.mi.com/details?id=com.seafile.vmoo&ref=search)
 
 ## Contributors
 
-See [Contributors Graph](https://github.com/haiwen/seadroid/graphs/contributors)
+See [Contributors Graph](https://github.com/SaudM/seadroid/pulse)
 
 ## Build the APK
 
@@ -23,7 +23,7 @@ See [Contributors Graph](https://github.com/haiwen/seadroid/graphs/contributors)
  ```
 * Build with `./gradlew assembleRelease`
 
-You will get `app/build/outputs/apk/seafile-${versionName}.apk` after the build finishes.
+You will get `app/build/outputs/apk/vmoo-${versionName}.apk` after the build finishes.
 
 ## Develop in Android Studio
 
@@ -40,17 +40,8 @@ You will get `app/build/outputs/apk/seafile-${versionName}.apk` after the build 
 * Choose import from gradle
 * Click next until import is completed
 
-## Develop in IntelliJ/Eclipse
-For those who are using maven build structures, checkout the project from [maven](https://github.com/haiwen/seadroid/tree/maven) branch.
 
-## Internationalization
-
-### Contribute your translation
-
-Please submit translations via Transifex: https://www.transifex.com/haiwen/seadroid/
-
-Steps:
-
-1. Create a free account on Transifex (https://www.transifex.com/).
-2. Send a request to join the language translation.
-3. After accepted by the project maintainer, then you can upload your file or translate online.
+## 中文一些说明
+* 这是一个致力于共享各类学习视频的平台
+* 欢迎贡献你手里到任何类型的视频或者学习资料 [上传视频](https://vmoo.saud.net.cn/u/d/bd7decfe0456483d9c0b/) 
+* 欢迎贡献代码
