@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 
 public class LinkDialogView extends LinearLayout {
     private EditText mDescriptionEditText;

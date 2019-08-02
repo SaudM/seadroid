@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
@@ -14,12 +13,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.gesturelock.LockPatternUtils;
 import com.seafile.vmoo.gesturelock.LockPatternView;
 
 import java.util.List;
+
+import androidx.appcompat.widget.Toolbar;
 
 
 public class UnlockGesturePasswordActivity extends BaseActivity implements Toolbar.OnMenuItemClickListener {

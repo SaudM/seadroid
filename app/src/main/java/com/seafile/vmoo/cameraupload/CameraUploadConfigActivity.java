@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.seafile.seadroid2.R;
-import com.seafile.seadroid2.util.SystemSwitchUtils;
+import com.seafile.vmoo.R;
+import com.seafile.vmoo.util.SystemSwitchUtils;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.data.SeafRepo;

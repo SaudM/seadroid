@@ -6,7 +6,7 @@ import android.text.TextUtils;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
-import com.seafile.seadroid2.BuildConfig;
+import com.seafile.vmoo.BuildConfig;
 import com.seafile.vmoo.util.Utils;
 
 public class Account implements Parcelable, Comparable<Account> {

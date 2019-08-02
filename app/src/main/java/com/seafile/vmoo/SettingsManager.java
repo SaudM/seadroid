@@ -51,7 +51,7 @@ public final class SettingsManager {
     public static final int GESTURE_LOCK_REQUEST = 1;
 
     // Camera upload
-    public static final String PKG = "com.seafile.seadroid2";
+    public static final String PKG = "com.seafile.vmoo";
 
     public static final String SHARED_PREF_CONTACTS_UPLOAD_REPO_ID = PKG + ".contacts.repoid";
     public static final String SHARED_PREF_CONTACTS_UPLOAD_REPO_NAME = PKG + ".contacts.repoName";

@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.editor.controller.BlockQuotesController;
 import com.seafile.vmoo.editor.controller.CodeController;
 import com.seafile.vmoo.editor.controller.HeaderController;

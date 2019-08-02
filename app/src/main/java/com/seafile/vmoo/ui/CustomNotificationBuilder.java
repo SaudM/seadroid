@@ -3,10 +3,12 @@ package com.seafile.vmoo.ui;
 import android.app.Notification;
 import android.content.Context;
 import android.os.Build;
-import androidx.core.app.NotificationCompat;
 import android.view.View;
 import android.widget.RemoteViews;
-import com.seafile.seadroid2.R;
+
+import com.seafile.vmoo.R;
+
+import androidx.core.app.NotificationCompat;
 
 /**
  * Extends the support class {@link androidx.core.app.NotificationCompat.Builder} to grant that

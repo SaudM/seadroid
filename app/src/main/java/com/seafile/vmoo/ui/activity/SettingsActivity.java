@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Window;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.transfer.TransferService;
 import com.seafile.vmoo.ui.fragment.SettingsFragment;
 

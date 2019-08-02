@@ -1,7 +1,6 @@
 package com.seafile.vmoo.ui.adapter;
 
 import android.graphics.Bitmap;
-import androidx.viewpager.widget.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.data.DataManager;
 import com.seafile.vmoo.data.SeafPhoto;
@@ -25,6 +24,7 @@ import com.seafile.vmoo.util.Utils;
 import java.io.File;
 import java.util.List;
 
+import androidx.viewpager.widget.PagerAdapter;
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 

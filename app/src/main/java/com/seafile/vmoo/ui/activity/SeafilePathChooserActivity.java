@@ -18,7 +18,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafConnection;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.SettingsManager;

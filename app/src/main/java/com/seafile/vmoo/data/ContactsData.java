@@ -1,4 +1,4 @@
-//package com.seafile.seadroid2.data;
+//package com.seafile.vmoo.data;
 //
 //import java.util.ArrayList;
 //import java.util.List;

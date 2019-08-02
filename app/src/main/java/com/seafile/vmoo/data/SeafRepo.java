@@ -1,6 +1,6 @@
 package com.seafile.vmoo.data;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.util.PinyinUtils;

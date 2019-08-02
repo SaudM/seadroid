@@ -10,7 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.editor.EditorActivity;
 import com.seafile.vmoo.util.FileMimeUtils;
 

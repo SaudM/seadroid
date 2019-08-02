@@ -8,8 +8,6 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import androidx.fragment.app.ListFragment;
-import androidx.appcompat.view.ActionMode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,13 +21,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.common.collect.Lists;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.transfer.TransferService;
 import com.seafile.vmoo.transfer.TransferTaskInfo;
 import com.seafile.vmoo.ui.activity.TransferActivity;
 import com.seafile.vmoo.ui.adapter.TransferTaskAdapter;
 
 import java.util.List;
+
+import androidx.appcompat.view.ActionMode;
+import androidx.fragment.app.ListFragment;
 
 /**
  * Base class for transfer task fragments

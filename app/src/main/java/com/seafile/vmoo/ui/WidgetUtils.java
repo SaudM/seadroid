@@ -12,7 +12,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.ui.activity.BaseActivity;

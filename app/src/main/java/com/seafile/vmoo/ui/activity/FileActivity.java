@@ -7,7 +7,6 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafConnection;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.account.Account;
@@ -32,6 +31,8 @@ import com.seafile.vmoo.util.Utils;
 
 import java.io.File;
 import java.net.HttpURLConnection;
+
+import androidx.appcompat.widget.Toolbar;
 
 /**
  * Display a file

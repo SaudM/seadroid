@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.common.collect.Maps;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.account.Account;
@@ -47,10 +47,10 @@ import androidx.appcompat.app.AlertDialog;
 public class SettingsFragment extends CustomPreferenceFragment {
     private static final String DEBUG_TAG = "SettingsFragment";
 
-    public static final String CAMERA_UPLOAD_BOTH_PAGES = "com.seafile.seadroid2.camera.upload";
-    public static final String CAMERA_UPLOAD_REMOTE_LIBRARY = "com.seafile.seadroid2.camera.upload.library";
-    public static final String CAMERA_UPLOAD_LOCAL_DIRECTORIES = "com.seafile.seadroid2.camera.upload.directories";
-    public static final String CONTACTS_UPLOAD_REMOTE_LIBRARY = "com.seafile.seadroid2.contacts.upload.library";
+    public static final String CAMERA_UPLOAD_BOTH_PAGES = "com.seafile.vmoo.camera.upload";
+    public static final String CAMERA_UPLOAD_REMOTE_LIBRARY = "com.seafile.vmoo.camera.upload.library";
+    public static final String CAMERA_UPLOAD_LOCAL_DIRECTORIES = "com.seafile.vmoo.camera.upload.directories";
+    public static final String CONTACTS_UPLOAD_REMOTE_LIBRARY = "com.seafile.vmoo.contacts.upload.library";
     public static final int CHOOSE_CAMERA_UPLOAD_REQUEST = 2;
 //    public static final int CHOOSE_CONTACTS_UPLOAD_REQUEST = 3;
 

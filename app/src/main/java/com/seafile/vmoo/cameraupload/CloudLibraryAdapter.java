@@ -2,7 +2,7 @@ package com.seafile.vmoo.cameraupload;
 
 import android.view.View;
 import android.widget.ImageView;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.data.SeafRepo;
 import com.seafile.vmoo.ui.adapter.ReposAdapter;
 

@@ -1,7 +1,7 @@
 package com.seafile.vmoo.ui.adapter;
 
 import android.content.Context;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 
 /**
  * Adapter for showing account in a list view.

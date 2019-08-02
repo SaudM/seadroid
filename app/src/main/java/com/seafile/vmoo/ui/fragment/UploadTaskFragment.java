@@ -1,7 +1,7 @@
 package com.seafile.vmoo.ui.fragment;
 
 import android.os.Bundle;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.transfer.TaskState;
 import com.seafile.vmoo.transfer.TransferTaskInfo;
 import com.seafile.vmoo.transfer.UploadTaskInfo;

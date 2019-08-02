@@ -2,7 +2,7 @@ package com.seafile.vmoo.fileschooser;
 
 import java.util.List;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 
 import android.os.Bundle;
 import android.os.Environment;

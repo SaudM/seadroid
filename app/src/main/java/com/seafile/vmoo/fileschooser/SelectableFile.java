@@ -3,7 +3,7 @@ package com.seafile.vmoo.fileschooser;
 import java.io.File;
 import java.io.FileFilter;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.data.SeafItem;
 import com.seafile.vmoo.util.Utils;
 

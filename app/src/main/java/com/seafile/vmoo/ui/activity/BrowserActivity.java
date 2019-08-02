@@ -28,7 +28,7 @@ import android.widget.FrameLayout;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import com.google.common.collect.Lists;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafConnection;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.SettingsManager;

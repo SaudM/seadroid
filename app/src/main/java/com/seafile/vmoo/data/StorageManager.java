@@ -5,11 +5,10 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
-import androidx.core.os.EnvironmentCompat;
 import android.text.format.Formatter;
 import android.util.Log;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.account.Account;
@@ -20,6 +19,8 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
+
+import androidx.core.os.EnvironmentCompat;
 
 /**
  * This class decides where to store Seadroid's data in the file system.

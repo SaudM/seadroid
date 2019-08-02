@@ -2,18 +2,19 @@ package com.seafile.vmoo.ui.dialog;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import androidx.core.widget.NestedScrollView;
-import androidx.appcompat.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.data.DataManager;
+
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.widget.NestedScrollView;
 
 class NewRepoTask extends TaskDialog.Task {
 

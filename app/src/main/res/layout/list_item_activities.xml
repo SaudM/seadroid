@@ -80,7 +80,7 @@
         android:id="@+id/rl_activities_new"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.seafile.seadroid2.ui.widget.CircleImageView
+        <com.seafile.vmoo.ui.widget.CircleImageView
             android:id="@+id/iv_activities_avatar_url"
             android:layout_marginTop="@dimen/padding_normal"
             android:layout_marginBottom="@dimen/padding_normal"

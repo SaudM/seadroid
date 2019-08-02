@@ -9,7 +9,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 
 class GetShareLinkPasswordTask extends TaskDialog.Task {
     String password;

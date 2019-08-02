@@ -18,7 +18,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.LocaleList;
 import android.provider.OpenableColumns;
-import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -28,7 +27,7 @@ import android.webkit.MimeTypeMap;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.data.SeafRepo;
 import com.seafile.vmoo.fileschooser.SelectableFile;
@@ -73,9 +72,11 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TreeMap;
 
+import androidx.annotation.NonNull;
+
 public class Utils {
     public static final String MIME_APPLICATION_OCTET_STREAM = "application/octet-stream";
-    public static final String AUTHORITY = "com.seafile.seadroid2";
+    public static final String AUTHORITY = "com.seafile.vmoo";
     public static final String PATH_SEPERATOR = "/";
     // public static final String NOGROUP = "$nogroup";
     public static final String PERSONAL_REPO = "personal_repo";

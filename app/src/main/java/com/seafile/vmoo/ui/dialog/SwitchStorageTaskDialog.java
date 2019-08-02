@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.cameraupload.CameraUploadManager;

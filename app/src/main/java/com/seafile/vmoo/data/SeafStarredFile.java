@@ -1,12 +1,12 @@
 package com.seafile.vmoo.data;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.util.Log;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.util.Utils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class SeafStarredFile implements SeafItem {
     public enum FileType { DIR, FILE };

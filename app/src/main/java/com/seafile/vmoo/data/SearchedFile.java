@@ -1,7 +1,7 @@
 package com.seafile.vmoo.data;
 
 import android.util.Log;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.util.Utils;
 
 import org.json.JSONException;

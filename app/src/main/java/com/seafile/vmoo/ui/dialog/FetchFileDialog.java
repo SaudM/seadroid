@@ -1,13 +1,9 @@
 package com.seafile.vmoo.ui.dialog;
 
-import java.net.HttpURLConnection;
-
-import androidx.appcompat.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.fragment.app.DialogFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,13 +12,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafConnection;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.transfer.DownloadTaskInfo;
 import com.seafile.vmoo.transfer.TransferService;
 import com.seafile.vmoo.ui.activity.BrowserActivity;
 import com.seafile.vmoo.util.Utils;
+
+import java.net.HttpURLConnection;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
 
 /**
  * Check and download the latest version of a file and open it

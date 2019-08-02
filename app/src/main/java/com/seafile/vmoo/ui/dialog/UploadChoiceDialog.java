@@ -8,7 +8,7 @@ import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
 import androidx.appcompat.app.AlertDialog;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.fileschooser.MultiFileChooserActivity;
 import com.seafile.vmoo.gallery.MultipleImageSelectionActivity;

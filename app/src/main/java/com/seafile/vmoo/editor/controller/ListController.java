@@ -2,7 +2,7 @@ package com.seafile.vmoo.editor.controller;
 
 import android.widget.Toast;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.editor.Utils;
 import com.yydcdut.markdown.MarkdownEditText;
 import com.yydcdut.markdown.span.MDOrderListSpan;

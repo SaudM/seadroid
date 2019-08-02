@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat;
 import android.transition.Transition;
 import android.view.View;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafConnection;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.ui.activity.BaseActivity;

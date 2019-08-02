@@ -1,26 +1,27 @@
 package com.seafile.vmoo.fileschooser;
 
-import java.io.File;
-import java.net.URISyntaxException;
-import java.util.List;
-
-import com.google.common.collect.Lists;
-import com.seafile.seadroid2.R;
-import com.seafile.vmoo.util.Utils;
-
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.widget.Toast;
+
+import com.google.common.collect.Lists;
+import com.seafile.vmoo.R;
+import com.seafile.vmoo.util.Utils;
+
+import java.io.File;
+import java.net.URISyntaxException;
+import java.util.List;
+
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.FragmentManager.BackStackEntry;
 import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
-import android.widget.Toast;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MultiFileChooserActivity extends FragmentActivity implements
 OnBackStackChangedListener {
@@ -28,7 +29,7 @@ OnBackStackChangedListener {
     public static final String EXTERNAL_BASE_PATH = Environment
             .getExternalStorageDirectory().getAbsolutePath();
     public static final String PATH = "path";
-    public static final String MULTI_FILES_PATHS = "com.seafile.seadroid2.fileschooser.paths";
+    public static final String MULTI_FILES_PATHS = "com.seafile.vmoo.fileschooser.paths";
 
     private String mPath;
     private FragmentManager mFragmentManager;

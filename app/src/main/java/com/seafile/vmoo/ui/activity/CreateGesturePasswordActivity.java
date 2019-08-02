@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.gesturelock.LockPatternUtils;
 import com.seafile.vmoo.gesturelock.LockPatternView;

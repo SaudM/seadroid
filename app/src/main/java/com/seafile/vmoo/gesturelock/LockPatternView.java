@@ -17,9 +17,6 @@
 package com.seafile.vmoo.gesturelock;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -41,7 +38,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

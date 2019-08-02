@@ -1,14 +1,15 @@
 package com.seafile.vmoo.editor.controller;
 
 import android.content.DialogInterface;
-import androidx.appcompat.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.editor.LinkDialogView;
 import com.yydcdut.markdown.MarkdownEditText;
+
+import androidx.appcompat.app.AlertDialog;
 
 
 public class LinkController {

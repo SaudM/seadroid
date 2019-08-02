@@ -115,9 +115,9 @@
 }
 -dontwarn com.google.**
 
--keep class com.seafile.seadroid2.**
--keepclassmembers class com.seafile.seadroid2.** { *; }
--keepclassmembers class com.seafile.seadroid2.** { public <init>(...); }
+-keep class com.seafile.vmoo.**
+-keepclassmembers class com.seafile.vmoo.** { *; }
+-keepclassmembers class com.seafile.vmoo.** { public <init>(...); }
 -keepclassmembers class * extends com.actionbarsherlock.ActionBarSherlock { public <init>(...); }
 
 -keep class tv.danmaku.ijk.** { *; }

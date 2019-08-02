@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.data.CertificateInfo;
 import com.seafile.vmoo.ssl.SSLTrustManager;

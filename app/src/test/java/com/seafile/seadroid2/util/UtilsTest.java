@@ -1,4 +1,4 @@
-package com.seafile.seadroid2.util;
+package com.seafile.vmoo.util;
 
 import com.seafile.vmoo.util.Utils;
 

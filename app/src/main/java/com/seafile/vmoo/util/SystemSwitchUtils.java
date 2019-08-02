@@ -1,11 +1,10 @@
-package com.seafile.seadroid2.util;
+package com.seafile.vmoo.util;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.ConnectivityManager;
 
-import com.seafile.seadroid2.R;
-import com.seafile.vmoo.util.Utils;
+import com.seafile.vmoo.R;
 
 import java.text.SimpleDateFormat;
 

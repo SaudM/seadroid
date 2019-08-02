@@ -1,14 +1,16 @@
 package com.seafile.vmoo.notification;
 
 import android.app.NotificationManager;
-import androidx.core.app.NotificationCompat;
-import com.seafile.seadroid2.R;
+
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.transfer.TransferManager;
 import com.seafile.vmoo.transfer.TransferService;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import androidx.core.app.NotificationCompat;
 
 /**
  * All downloading events will be represented by one downloading notification, at the same time all

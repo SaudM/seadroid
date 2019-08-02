@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.notification.BaseNotificationProvider;
 import com.seafile.vmoo.notification.DownloadNotificationProvider;
 import com.seafile.vmoo.ui.adapter.TransferTaskAdapter;

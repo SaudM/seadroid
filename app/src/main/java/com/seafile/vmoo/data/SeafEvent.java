@@ -2,7 +2,7 @@ package com.seafile.vmoo.data;
 
 import android.util.Log;
 
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 
 import org.json.JSONObject;
 

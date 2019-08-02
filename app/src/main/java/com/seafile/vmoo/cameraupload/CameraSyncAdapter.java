@@ -19,7 +19,7 @@ import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.common.base.Joiner;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.account.Account;

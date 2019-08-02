@@ -41,8 +41,8 @@ import android.util.Log;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.seafile.seadroid2.BuildConfig;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.BuildConfig;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeadroidApplication;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.account.Account;

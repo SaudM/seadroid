@@ -4,7 +4,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.seafile.seadroid2.BuildConfig;
+import com.seafile.vmoo.BuildConfig;
 import com.seafile.vmoo.account.Account;
 import com.seafile.vmoo.account.AccountManager;
 

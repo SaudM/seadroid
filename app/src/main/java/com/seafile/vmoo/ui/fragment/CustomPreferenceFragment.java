@@ -16,9 +16,6 @@
 
 package com.seafile.vmoo.ui.fragment;
 
-import com.seafile.seadroid2.R;
-import com.seafile.vmoo.ui.CustomPreferenceManagerCompat;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,13 +24,17 @@ import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
-import androidx.fragment.app.Fragment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import com.seafile.vmoo.R;
+import com.seafile.vmoo.ui.CustomPreferenceManagerCompat;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * Unofficial PreferenceFragment compatibility layer for Android 1.6 and up.

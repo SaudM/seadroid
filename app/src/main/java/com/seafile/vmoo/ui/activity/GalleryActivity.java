@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.google.common.collect.Lists;
 import com.seafile.vmoo.ui.HackyViewPager;
 import com.seafile.vmoo.util.ConcurrentAsyncTask;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 import com.seafile.vmoo.SeafException;
 import com.seafile.vmoo.SettingsManager;
 import com.seafile.vmoo.account.Account;

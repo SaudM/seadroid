@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.seafile.seadroid2.R;
+import com.seafile.vmoo.R;
 
 /**
  * Welcome fragment for camera upload configuration helper
